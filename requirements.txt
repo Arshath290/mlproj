@@ -4,7 +4,7 @@ numpy==1.26.4
 joblib==1.4.2
 requests==2.32.3
 webencodings==0.5.1
-mkl-service==2.4.0
+
 matplotlib==3.9.2
 protobuf==4.25.3
 ply==3.11
