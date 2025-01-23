@@ -5,7 +5,7 @@ import joblib
 import requests
 import os
 
-MODEL_URL = "ihttps://www.dropbox.com/scl/fi/cznh69o8d17pk5eibvdh5/final_model.pkl?rlkey=1utpmdcmeqxd6k0tq8qxl16bu&st=3s723isz&dl=0"
+MODEL_URL = "https://www.dropbox.com/scl/fi/cznh69o8d17pk5eibvdh5/final_model.pkl?rlkey=1utpmdcmeqxd6k0tq8qxl16bu&st=3s723isz&dl=0"
 
 
 def download_model():
