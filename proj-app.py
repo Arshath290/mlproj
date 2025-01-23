@@ -10,7 +10,7 @@ import os
 
 
 # Function for making predictions
-def make_prediction(features):
+
    
 # Streamlit App UI
 st.title('Resale Price Prediction')
