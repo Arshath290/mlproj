@@ -6,11 +6,12 @@ import requests
 import os
 
 
-
+model = joblib.load('final_model.pkl')
 
 
 # Function for making predictions
-
+def make_prediction(features):
+    return model.predict([features])
    
 # Streamlit App UI
 st.title('Resale Price Prediction')
