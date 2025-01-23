@@ -5,22 +5,13 @@ import joblib
 import requests
 import os
 
-MODEL_URL = "https://www.dropbox.com/scl/fi/cznh69o8d17pk5eibvdh5/final_model.pkl?rlkey=1utpmdcmeqxd6k0tq8qxl16bu&st=3s723isz&dl=0"
 
 
-def download_model():
-    if not os.path.exists("final_model.pkl"):
-        with open("final_model.pkl", "wb") as f:
-            response = requests.get(MODEL_URL)
-            f.write(response.content)
 
-download_model()
-model = joblib.load('final_model.pkl')
 
 # Function for making predictions
 def make_prediction(features):
-    return model.predict([features])
-
+   
 # Streamlit App UI
 st.title('Resale Price Prediction')
 
