@@ -1,17 +1,9 @@
-streamlit==1.19.0
-matplotlib==3.9.2
+streamlit==1.40.1
+pandas==2.2.2
+numpy==1.26.4
+joblib==1.4.2
+requests==2.32.3
 
-mkl-service==2.4.0
-
-ply==3.11
-
-protobuf==4.25.3
-
-PyQt5==5.15.10
-
-pywin32==305.1
 
 scikit-learn==1.2.1
-
-webencodings==0.5.1
 
