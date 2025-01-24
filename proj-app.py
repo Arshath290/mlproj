@@ -11,10 +11,10 @@ def download_model_from_drive(url, output_path):
 
 @st.cache_resource
 def load_model():
-    model_path = "final_model.pkl"
+    model_path = "final2_model.pkl.gz"
     if not os.path.exists(model_path):
         print("Downloading model from Google Drive...")
-        google_drive_url = "https://drive.google.com/file/d/18hnbvCXcBBnq7hJxxxzhG4c9DsQrXT1n/view?usp=sharing"
+        google_drive_url = "https://drive.google.com/file/d/1rpjwuIek2loiCAosYeUhatS_c-xUjOg_/view?usp=sharing"
         download_model_from_drive(google_drive_url, model_path)
     model = joblib.load(model_path)
     print("Model loaded successfully.")
