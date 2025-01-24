@@ -5,8 +5,31 @@ import joblib
 import requests
 import os
 
+def download_model_from_drive(url, output_path):
+    gdown.download(url, output_path, quiet=False)
 
-model = joblib.load('final_model.pkl')
+# Streamlit function to cache the model
+@st.cache_resource
+def load_model():
+    model_path = "final_model.pkl"
+    
+    try:
+        # Try loading the model locally
+        model = joblib.load(model_path)
+        print("Model loaded from local storage.")
+    except FileNotFoundError:
+        
+        print("Downloading model from Google Drive...")
+        
+        google_drive_url = "https://drive.google.com/file/d/18hnbvCXcBBnq7hJxxxzhG4c9DsQrXT1n/view?usp=sharing"
+        download_model_from_drive(google_drive_url, model_path)
+        model = joblib.load(model_path)
+        print("Model downloaded and loaded.")
+    
+    return model
+
+# Load the model (cached after the first load)
+model = load_model()
 
 
 # Function for making predictions
